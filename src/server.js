@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 const pool = new Pool({
   user: 'postgres',
   password: 'postgres',
-  host: 'localhost',
+  host: 'database-dms.c1oqwsaqc09s.us-east-2.rds.amazonaws.com',
   database: 'periodic_table',
   port: 5432,
 });

@@ -7,7 +7,7 @@ function App() {
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    fetch(`http://localhost:5001/api/data?limit=${limit}&offset=${offset}&search=${search}`)
+    fetch(`http://ec2-18-190-160-141.us-east-2.compute.amazonaws.com:5001/api/data?limit=${limit}&offset=${offset}&search=${search}`)
       .then(response => response.json())
       .then(data => setData(data))
       .catch(error => console.error('Error fetching data:', error));
@@ -36,7 +36,6 @@ function App() {
   return (
     <div>
       <table id="periodicTableId">
-        <caption id="tableCaptionId">Periodic Table of the Elements</caption>
         <tbody>
           <tr id="buttonTrId">
             <th id="prevBtnThId" colSpan={2}>
